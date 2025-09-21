@@ -1,6 +1,16 @@
 // Inclui a biblioteca padrão de entrada e saída (Standard Input/Output).
 // Esta biblioteca é essencial para usarmos funções como printf() para exibir
 // informações na tela e scanf() para ler dados do teclado do usuário.
+
+/******************************************************************************
+*
+* Desafio: Nível Aventureiro - Cadastro de Cartas Super Trunfo
+* Autor: Leonardo Silva de Melo
+* Data: 21/09/2025
+*
+*
+*******************************************************************************/
+
 #include <stdio.h>
 
 // A função main() é o ponto de entrada de todo programa em C.
@@ -19,6 +29,8 @@ int main() {
     float area1;            // Variável de ponto flutuante (com casas decimais) para a área.
     float pib1;             // Variável de ponto flutuante para o PIB.
     int pontosTuristicos1;  // Variável inteira para a quantidade de pontos turísticos.
+    float densidadePop1;    // NOVO: Variável para armazenar a densidade populacional.
+    float pibPerCapita1;    // NOVO: Variável para armazenar o PIB per capita.
 
     // --- DECLARAÇÃO DE VARIÁVEIS PARA A CARTA 2 ---
     // Similar à seção anterior, mas para os dados da segunda carta.
@@ -30,6 +42,8 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidadePop2;    // NOVO: Variável para armazenar a densidade populacional.
+    float pibPerCapita2;    // NOVO: Variável para armazenar o PIB per capita.
 
 
     // --- SEÇÃO DE ENTRADA DE DADOS: CADASTRO DA CARTA 1 ---
@@ -67,6 +81,11 @@ int main() {
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);
 
+    // NOVO: Realiza os cálculos para a Carta 1
+    densidadePop1 = (float)populacao1 / area1; // (float) garante que a divisão seja de ponto flutuante
+    // Multiplicamos o PIB por 1.000.000.000 para o cálculo correto do per capita
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1;
+
     printf("\n"); // Imprime uma linha em branco para melhor organização visual.
 
 
@@ -95,6 +114,10 @@ int main() {
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    // ADICIONADO: Realiza os cálculos para a Carta 2
+    densidadePop2 = (float)populacao2 / area2; // (float) garante que a divisão seja de ponto flutuante
+    // Multiplicamos o PIB por 1.000.000.000 para o cálculo correto do per capita
+    pibPerCapita2 = (pib2 * 1000000000) / populacao2;
 
     // --- SEÇÃO DE SAÍDA DE DADOS: EXIBIÇÃO DAS CARTAS CADASTRADAS ---
     // Após coletar todas as informações, esta seção as exibe na tela
@@ -111,6 +134,9 @@ int main() {
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
+    // ADICIONADO: Exibindo os resultados calculados para a Carta 1
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePop1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     // Exibindo todas as informações armazenadas para a Carta 2.
     printf("\nCarta 2:\n");
@@ -121,8 +147,15 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    // ADICIONADO: Exibindo os resultados calculados para a Carta 2
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePop2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
     // A função main retorna 0 para indicar ao sistema operacional que o
     // programa foi executado com sucesso e terminou sem erros.
+
+
+
+    
     return 0;
 }
