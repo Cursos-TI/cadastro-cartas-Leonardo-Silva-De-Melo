@@ -1,7 +1,3 @@
-// Inclui a biblioteca padrão de entrada e saída (Standard Input/Output).
-// Esta biblioteca é essencial para usarmos funções como printf() para exibir
-// informações na tela e scanf() para ler dados do teclado do usuário.
-
 /******************************************************************************
 *
 * Desafio: Nível Aventureiro - Cadastro de Cartas Super Trunfo
@@ -10,6 +6,10 @@
 *
 *
 *******************************************************************************/
+
+// Inclui a biblioteca padrão de entrada e saída (Standard Input/Output).
+// Esta biblioteca é essencial para usarmos funções como printf() para exibir
+// informações na tela e scanf() para ler dados do teclado do usuário.
 
 #include <stdio.h>
 
