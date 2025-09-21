@@ -68,19 +68,20 @@ int main() {
 
     // Pede e lê a população da cidade (um número inteiro).
     printf("Digite a População: ");
-    scanf("%d", &populacao1);
+    scanf("%lu", &populacao1);
 
     // Pede e lê a área da cidade (um número com casas decimais).
     printf("Digite a Área (em km²): ");
-    scanf("%f", &area1);
+    scanf("%lf", &area1); 
 
     // Pede e lê o PIB da cidade.
     printf("Digite o PIB (em bilhões): ");
-    scanf("%f", &pib1);
+    scanf("%lf", &pib1);
 
     // Pede e lê o número de pontos turísticos.
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);
+    printf("\n"); 
 
 
     // --- SEÇÃO DE ENTRADA DE DADOS: CADASTRO DA CARTA 2 ---
@@ -97,17 +98,17 @@ int main() {
     scanf(" %[^\n]", cidade2);
 
     printf("Digite a População: ");
-    scanf("%d", &populacao2);
+    scanf("%lu", &populacao2);
 
     printf("Digite a Área (em km²): ");
-    scanf("%f", &area2);
+    scanf("%lf", &area2);
 
     printf("Digite o PIB (em bilhões): ");
-    scanf("%f", &pib2);
+    scanf("%lf", &pib2);
 
     printf("Digite o Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
- 
+    printf("\n"); 
 
    // --- SEÇÃO DE CÁLCULOS ---
     
